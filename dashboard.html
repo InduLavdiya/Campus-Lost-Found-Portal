@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================================
+         BASIC SETTINGS
+    =========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Lost & Found Portal</title>
+
+    <!-- ==========================================================
+         GOOGLE FONT
+    =========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- ==========================================================
+         FONT AWESOME
+    =========================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- ==========================================================
+         CSS FILE
+    =========================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================================
+         LOADER
+    =========================================================== -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <i class="fa-solid fa-box-open"></i>
+
+            <h1>Campus Lost & Found Portal</h1>
+
+            <p>Loading Campus Services...</p>
+
+            <div class="spinner"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ==========================================================
+         MAIN WEBSITE
+    =========================================================== -->
+
+    <div id="main-content">
+
+        <!-- ======================================================
+             NAVBAR
+        ======================================================= -->
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <span>Campus Lost & Found</span>
+
+            </div>
+
+            <ul class="nav-menu">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#reports" id="lostNav">Lost Items</a></li>
+
+                <li><a href="#reports" id="foundNav">Found Items</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+         <div class="nav-buttons">
+
+    <span id="welcomeUser"></span>
+
+    <button id="themeToggle">
+
+        🌙
+
+    </button>
+
+    <button id="logoutBtn" class="register-btn">
+
+        Logout
+
+    </button>
+
+</div>  
+
+        </nav>
+
+        <!-- ======================================================
+             HERO SECTION
+        ======================================================= -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-left">
+
+                <h1>
+
+                    Lost Something?
+
+                </h1>
+
+                <h2>
+
+                    Found Something?
+
+                </h2>
+
+                <p>
+
+                    Helping students reconnect with their belongings quickly,
+                    safely and efficiently.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button id="lostButton">
+
+                        <i class="fa-solid fa-circle-exclamation"></i>
+
+                        Report Lost Item
+
+                    </button>
+
+                    <button id="foundButton">
+
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+
+                        Report Found Item
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <i class="fa-solid fa-magnifying-glass-location hero-icon"></i>
+
+            </div>
+
+        </section>
+<!-- ======================================================
+     SEARCH SECTION
+======================================================= -->
+
+<section class="search-section">
+
+    <input 
+        type="text"
+        id="searchInput"
+        placeholder="Search lost or found items...">
+
+</section>
+<!-- ======================================================
+     CATEGORY FILTER SECTION
+======================================================= -->
+
+
+<section class="filter-section">
+
+
+    <button class="filter-btn active"
+            data-category="All">
+
+        All
+
+    </button>
+
+
+    <button class="filter-btn"
+            data-category="Mobile">
+
+        Mobile
+
+    </button>
+
+
+    <button class="filter-btn"
+            data-category="Wallet">
+
+        Wallet
+
+    </button>
+
+
+    <button class="filter-btn"
+            data-category="ID Card">
+
+        ID Card
+
+    </button>
+
+
+    <button class="filter-btn"
+            data-category="Laptop">
+
+        Laptop
+
+    </button>
+
+
+    <button class="filter-btn"
+            data-category="Books">
+
+        Books
+
+    </button>
+
+
+</section>
+    
+<!-- ======================================================
+     LOST & FOUND ITEMS SECTION
+======================================================= -->
+
+<section id="reports" class="items-section">
+
+    <h2>
+        Latest Lost & Found Reports
+    </h2>
+
+
+    <!-- ==================================================
+         JAVASCRIPT WILL DISPLAY CARDS HERE
+    =================================================== -->
+
+    <div id="itemsContainer">
+
+
+    </div>
+
+
+</section>
+  <!-- ======================================================
+     REPORT ITEM MODAL
+====================================================== -->
+
+<div id="reportModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h2>Report an Item</h2>
+
+        <form id="reportForm">
+
+            <!-- ITEM TYPE -->
+
+            <label>Item Type *</label>
+
+            <select id="itemType" required>
+
+                <option value="">Select</option>
+
+                <option value="Lost">Lost</option>
+
+                <option value="Found">Found</option>
+
+            </select>
+
+            <!-- ITEM NAME -->
+
+            <label>Item Name *</label>
+
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Enter Item Name"
+                required>
+
+            <!-- CATEGORY -->
+
+            <label>Category *</label>
+
+            <select id="category" required>
+
+                <option value="">Select Category</option>
+
+                <option>ID Card</option>
+
+                <option>Mobile</option>
+
+                <option>Wallet</option>
+
+                <option>Keys</option>
+
+                <option>Laptop</option>
+
+                <option>Books</option>
+
+                <option>Others</option>
+
+            </select>
+
+            <!-- DESCRIPTION -->
+
+            <label>Description *</label>
+
+            <textarea
+                id="description"
+                rows="4"
+                placeholder="Describe the item..."
+                required></textarea>
+
+            <!-- LOCATION -->
+
+            <label>Location *</label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Where was it lost/found?"
+                required>
+
+            <!-- DATE -->
+
+            <label>Date *</label>
+
+            <input
+                type="date"
+                id="date"
+                required>
+
+            <!-- CONTACT -->
+
+            <label>Contact Number *</label>
+
+            <input
+               type="tel"
+              id="contactNumber"
+             placeholder="Enter Contact Number"
+             required>
+
+            <!-- IMAGE -->
+
+            <label>
+
+                Upload Image
+
+                <small>(Optional)</small>
+
+            </label>
+
+            <input
+                type="file"
+                id="image"
+                accept="image/*">
+
+            <div class="modal-buttons">
+
+                <button type="submit">
+
+                    Submit
+
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelModal">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ======================================================
+     VIEW DETAILS MODAL
+======================================================= -->
+
+
+<div id="detailsModal" class="modal">
+
+
+    <div class="modal-content details-box">
+
+
+        <span id="closeDetails">
+            &times;
+        </span>
+
+
+        <h2>
+            Item Details
+        </h2>
+
+
+        <div id="detailsContent">
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<!-- ======================================================
+     ABOUT SECTION
+====================================================== -->
+
+<section id="about" class="about-section">
+
+    <div class="section-title">
+
+        <h2>About Campus Lost & Found</h2>
+
+        <p>
+            Our portal helps students quickly report, search, and recover lost belongings across the campus.
+        </p>
+
+    </div>
+
+    <div class="about-content">
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Secure</h3>
+
+            <p>
+                Only authenticated users can report and manage items.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Fast</h3>
+
+            <p>
+                Search and report lost or found items within seconds.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Community Driven</h3>
+
+            <p>
+                Helping students reconnect with their belongings safely.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     CONTACT SECTION
+====================================================== -->
+
+<section id="contact" class="contact-section">
+
+    <div class="section-title">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Have questions or need assistance? Reach out to us.
+        </p>
+
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>support@campuslostfound.com</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <h3>Phone</h3>
+
+            <p>+91 7386751409</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>Location</h3>
+
+            <p>SR University, Hanamkonda, Telangana</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ======================================================
+             FOOTER
+        ======================================================= -->
+
+        <footer>
+
+            <p>
+
+                © 2026 Campus Lost & Found Portal |
+                Made with ❤️ using HTML, CSS & JavaScript
+
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- ======================================================
+     TOAST NOTIFICATION
+======================================================= -->
+
+<div id="toast">
+
+</div>
+<!-- ======================================================
+     SCROLL TO TOP BUTTON
+======================================================= -->
+
+
+<button id="scrollTopBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+    <!-- ==========================================================
+         JAVASCRIPT FILE
+    =========================================================== -->
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
