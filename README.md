@@ -1,10 +1,24 @@
 # Campus Lost & Found Portal
 
-A responsive web application that helps students report, search, and manage lost and found items on campus.
+A responsive web application that helps students report, search, and recover lost and found items on campus.
 
-## Features
+---
 
-- User Registration & Login (Firebase Authentication)
+## 🚀 Live Demo
+
+https://campus-lost-found-portal.web.app
+
+---
+
+## 📂 GitHub Repository
+
+https://github.com/InduLavdiya/Campus-Lost-Found-Portal
+
+---
+
+## ✨ Features
+
+- User Registration & Login
 - Forgot Password
 - Report Lost Items
 - Report Found Items
@@ -13,52 +27,67 @@ A responsive web application that helps students report, search, and manage lost
 - Edit & Delete Own Reports
 - Search Reports
 - Filter Lost / Found Items
-- Dark Mode
 - Responsive Design
+- Dark Mode
 - Real-time Firestore Database
 
-## Tech Stack
+---
+
+## 🛠 Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript (ES6)
 - Firebase Authentication
 - Firebase Firestore
+- Firebase Hosting
 - Cloudinary
-- Git & GitHub
 
-## Project Structure
+---
+
+## 📁 Project Structure
+
+```text
 Campus-Lost-Found-Portal/
 │
-├── images/
 ├── about.html
 ├── contact.html
 ├── dashboard.html
-├── firebase.js
 ├── forgot-password.html
 ├── index.html
 ├── login.html
 ├── profile.html
 ├── register.html
+├── firebase.js
+├── auth.js
 ├── script.js
 ├── style.css
 ├── landing.css
 ├── auth.css
-└── README.md
+├── firebase.json
+├── .firebaserc
+├── .gitignore
+├── README.md
+├── 404.html
+└── images/
+```
 
+---
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Email notifications
-- Admin Panel
+- Email Notifications
+- Admin Dashboard
 - Claim Verification
 - Report History
 - Advanced Filters
 
-## Live Demo
+---
 
-https://campus-lost-found-portal.web.app
-
-## Author
+## 👩‍💻 Author
 
 **Lavdiya Indu**
+
+B.Tech – Computer Science & Engineering
+
+SR University, Telangana
