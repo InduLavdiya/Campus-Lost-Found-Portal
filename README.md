@@ -87,7 +87,3 @@ Campus-Lost-Found-Portal/
 ## 👩‍💻 Author
 
 **Lavdiya Indu**
-
-B.Tech – Computer Science & Engineering
-
-SR University, Telangana
