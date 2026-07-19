@@ -923,48 +923,8 @@ footer{
     background:#dc2626;
 
 }
-/* ==========================================================
-   SEARCH SECTION
-========================================================== */
 
 
-.search-section{
-
-    width:90%;
-
-    margin:40px auto;
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-
-#searchInput{
-
-    width:600px;
-
-    padding:15px 20px;
-
-    border-radius:30px;
-
-    border:1px solid #ddd;
-
-    outline:none;
-
-    font-size:16px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-}
-
-
-#searchInput:focus{
-
-    border-color:#2563eb;
-
-}
 /* ==========================================================
    CATEGORY FILTER BUTTONS
 ========================================================== */
@@ -1267,6 +1227,100 @@ body.dark-mode select{
     color:white;
 
 }
+
+/* ==========================================================
+   SEARCH SECTION
+========================================================== */
+
+.search-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:30px 0;
+
+}
+
+
+/* ==========================================================
+   SEARCH BOX
+========================================================== */
+
+.search-box{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:550px;
+
+}
+
+
+/* ==========================================================
+   SEARCH ICON
+========================================================== */
+
+.search-box i{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748b;
+
+    font-size:18px;
+
+}
+
+
+/* ==========================================================
+   SEARCH INPUT
+========================================================== */
+
+#searchInput{
+
+    width:100%;
+
+    height:50px;
+
+    padding-left:50px;
+
+    padding-right:18px;
+
+    border:2px solid #dbe4f0;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+/* ==========================================================
+   SEARCH INPUT FOCUS
+========================================================== */
+
+#searchInput:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 12px rgba(37,99,235,0.25);
+
+}
 /* ==========================================================
    RESPONSIVE DESIGN
 ========================================================== */
@@ -1321,155 +1375,108 @@ body.dark-mode select{
 }
 
 
-
 /* ==========================================================
    MOBILE DEVICES
 ========================================================== */
 
-
-@media(max-width:600px){
-
-
+@media (max-width:600px){
 
     /* NAVBAR */
 
-
     .navbar{
-
         flex-direction:column;
-
-        gap:15px;
-
+        padding:20px;
+        gap:18px;
     }
 
+    .logo{
+        font-size:20px;
+    }
 
+    .logo i{
+        font-size:24px;
+    }
 
     .nav-menu{
-
-        flex-direction:column;
-
-        align-items:center;
-
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+        width:100%;
     }
-
-
 
     .nav-buttons{
-
-        flex-direction:column;
-
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        gap:15px;
         width:100%;
-
     }
 
-
-
-    .nav-buttons button,
-    .nav-buttons a{
-
-        width:100%;
-
-        text-align:center;
-
+    .nav-buttons a,
+    .nav-buttons button{
+        width:auto;
+        min-width:140px;
     }
-
-
 
     /* HERO */
 
-
     .hero h1{
-
         font-size:35px;
-
     }
-
-
 
     .hero h2{
-
         font-size:28px;
-
     }
-
-
 
     .hero-buttons{
-
-        flex-direction:column;
-
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
     }
-
-
 
     .hero-buttons button{
-
-        width:100%;
-
+        width:auto;
+        min-width:140px;
     }
-
-
 
     /* CARDS */
 
-
     #itemsContainer{
-
         grid-template-columns:1fr;
-
     }
-
-
 
     .item-card img{
-
         height:180px;
-
     }
-
-
 
     /* SEARCH */
 
-
     #searchInput{
-
         width:100%;
-
     }
-
-
 
     /* FILTER */
 
-
     .filter-section{
-
         gap:10px;
-
     }
-
-
 
     .filter-btn{
-
         width:45%;
-
     }
-
-
 
     /* MODALS */
 
-
     .modal-content{
-
         width:90%;
-
     }
 
-
 }
+
 /* ==========================================================
    ABOUT & CONTACT SECTIONS
 ========================================================== */

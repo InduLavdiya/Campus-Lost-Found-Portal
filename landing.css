@@ -747,3 +747,83 @@ nav a:hover{
     color:#cbd5e1;
 
 }
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+    html,
+    body{
+
+        overflow-x:hidden;
+
+        width:100%;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .nav-buttons{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:50px 20px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:48px;
+
+    }
+
+    .hero-left h2{
+
+        font-size:36px;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .hero-icon{
+
+        font-size:150px;
+
+    }
+
+}
